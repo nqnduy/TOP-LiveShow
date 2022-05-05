@@ -46,7 +46,7 @@
     "next-iron-session": "4.1.9",
     "next-seo": "4.26.0",
     "next-transpile-modules": "8.0.0",
-    "node-sass": "6.0.0",
+    "node-sass": "^7.0.1",
     "open": "^8.4.0",
     "qs": "6.9.4",
     "raw-loader": "4.0.1",
