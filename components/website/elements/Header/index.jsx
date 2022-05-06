@@ -60,7 +60,7 @@ function Header() {
                             </Link>
                         </li>
                         <li>
-                            <Link href="/newspromotion">
+                            <Link href="/new-promotion">
                                 <a className="txMain bold hoverText hoverText-pink">News & Promotions</a>
                             </Link>
                         </li>

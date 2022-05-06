@@ -1,6 +1,6 @@
+import NewsCard from "@/website/common/Card/NewsCard";
+import SocialGroup from "@/website/common/SocialGroup";
 import React from "react";
-import NewsCard from "../../Card/NewsCard";
-import SocialGroup from "../../Header/SocialGroup";
 
 export default function NewDetail() {
     return (

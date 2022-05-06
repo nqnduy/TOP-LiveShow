@@ -21,7 +21,7 @@ const MasterPageBasic = ({ pageName, children }) => {
             <NextSeo nofollow={CONFIG.environment != "production"} noindex={CONFIG.environment != "production"} />
             <Head>
                 <title>
-                    {CONFIG.site.title} | {pageName || "Trang chủ"}
+                    {CONFIG.site.title} | {pageName || "Home"}
                 </title>
 
                 <meta name="description" content={CONFIG.site.description}></meta>

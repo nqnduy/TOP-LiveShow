@@ -3,7 +3,7 @@ import GalleryPage from "@/website/pages/GalleryPage"
 export default function Gallery() {
   return (
       <>
-          <MasterPageBasic>
+          <MasterPageBasic pageName={"Gallery"}>
               <GalleryPage/>
         </MasterPageBasic>
       </>

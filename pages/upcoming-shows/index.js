@@ -4,7 +4,7 @@ import UpcomingShowsPage from '@/components/website/pages/UpcomingShowsPage';
 
 export default function UpcomingShows(props) {
     return (
-        <MasterPageBasic>
+        <MasterPageBasic pageName={"Upcoming Shows"}>
            <UpcomingShowsPage/>
         </MasterPageBasic>
     );
