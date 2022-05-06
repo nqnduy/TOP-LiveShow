@@ -17,7 +17,7 @@ function Footer() {
                             <Input />
                         </div>
                     </div>
-                    <div className="Footer__navigate flexSB hide">
+                    <div className="Footer__navigate flexSB">
                         <div className="logo">
                             <Image src="/images/icons/logo.svg" alt="Logo" width={107} height={40} />
                         </div>
@@ -107,5 +107,7 @@ function Footer() {
         </>
     );
 }
+
+Footer.propTypes = {};
 
 export default Footer;

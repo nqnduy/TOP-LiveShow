@@ -1,12 +1,12 @@
+import AboutUs from "@/components/website/section/AboutUs";
+import FAQ from "@/components/website/section/FAQ";
+import HeroBanner from "@/components/website/section/HeroBanner/index";
+import Organizational from "@/components/website/section/Organizational";
+import OurTeam from "@/components/website/section/OurTeam";
+import ShowList from "@/components/website/section/ShowList";
+import Upcoming from "@/components/website/section/UpComing/index";
+import WhatNew from "@/components/website/section/WhatNew";
 import React from "react";
-import AboutUs from "../section/AboutUs";
-import FAQ from "../section/FAQ";
-import HeroBanner from "../section/HeroBanner/index";
-import Organizational from "../section/Organizational";
-import OurTeam from "../section/OurTeam";
-import ShowList from "../section/ShowList";
-import Upcoming from "../section/UpComing/index";
-import WhatNew from "../section/WhatNew/index";
 
 const Homepage = (props) => {
     return (

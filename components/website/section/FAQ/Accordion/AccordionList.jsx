@@ -45,5 +45,6 @@ function AccordionList() {
         </>
     );
 }
+AccordionList.propTypes = {};
 
 export default AccordionList;

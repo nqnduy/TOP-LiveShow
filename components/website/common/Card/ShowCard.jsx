@@ -1,5 +1,5 @@
-import Button from "../Button/Button";
-import ImageWrap from "../ImageWrap";
+import Button from "@/website/common/Button/ButtonMain";
+import ImageWrap from "@/website/common/ImageWrap";
 
 function ShowCard({ time, location, image, price, title, ticket }) {
     return (

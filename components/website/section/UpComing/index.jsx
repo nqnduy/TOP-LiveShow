@@ -1,6 +1,6 @@
-import TextTitle from "../../common/TextTitle";
-import GridCard from "./GridCard";
-import ListCard from "./ListCard";
+import TextTitle from "@/website/common/TextTitle";
+import GridCard from "@/website/section/UpComing/GridCard";
+import ListCard from "@/website/section/UpComing/ListCard";
 
 function Upcoming({ isList = true, haveTitle = true, pTop = 100 }) {
     return (

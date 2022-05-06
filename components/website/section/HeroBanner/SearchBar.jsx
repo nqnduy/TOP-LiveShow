@@ -1,5 +1,5 @@
+import Button from "@/website/common/Button/ButtonMain";
 import Image from "next/image";
-import Button from "../../common/Button/Button";
 function SearchBar() {
     return (
         <>

@@ -1,15 +1,9 @@
+import ArrowNext from "@/components/website/common/ArrowNext";
+import ArrowPrev from "@/components/website/common/ArrowPrev";
+import MemberCard from "@/components/website/common/Card/MemberCard";
+import TextTitle from "@/components/website/common/TextTitle";
 import Slider from "react-slick";
-import ArrowNext from "../../common/ArrowNext";
-import ArrowPrev from "../../common/ArrowPrev";
-import MemberCard from "../../common/Card/MemberCard";
-import TextTitle from "../../common/TextTitle";
 export default function TypeCenter() {
-    // const next = () => {
-    //     slider.slickNext();
-    // };
-    // const previous = () => {
-    //     slider.slickPrev();
-    // };
     const settings = {
         className: "center",
         centerMode: true,
@@ -59,8 +53,7 @@ export default function TypeCenter() {
                     }
                     .slick-list {
                         padding: 0 !important;
-                    }import TextTitle from '../../common/TextTitle';
-import ArrowNext from '../../common/ArrowNext';
+                    }
 
                     .slick-slide {
                         &:nth-child(3n + 2) {

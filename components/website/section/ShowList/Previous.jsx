@@ -1,10 +1,9 @@
-// import asset from "plugins/assets/asset";
 import asset from "@/plugins/assets/asset";
+import ArrowNext from "@/website/common/ArrowNext";
+import ArrowPrev from "@/website/common/ArrowPrev";
+import Button from "@/website/common/Button/ButtonMain";
+import PreviousShowCard from "@/website/common/Card/PreviousShowCard";
 import Slider from "react-slick";
-import ArrowNext from "../../common/ArrowNext";
-import ArrowPrev from "../../common/ArrowPrev";
-import Button from "../../common/Button/Button";
-import PreviousShowCard from "../../common/Card/PreviousShowCard";
 
 function PreviousShowList() {
     const settings = {
@@ -49,5 +48,6 @@ function PreviousShowList() {
         </>
     );
 }
+PreviousShowList.propTypes = {};
 
 export default PreviousShowList;

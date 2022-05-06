@@ -17,5 +17,6 @@ function Organizational() {
         </div>
     );
 }
+Organizational.propTypes = {};
 
 export default Organizational;

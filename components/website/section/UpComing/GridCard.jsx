@@ -1,6 +1,6 @@
+import ShowCard from "@/website/common/Card/ShowCard";
+import SortDropdown from "@/website/common/SortDropDown";
 import React from "react";
-import ShowCard from "../../common/Card/ShowCard";
-import SortDropdown from "../../common/SortDropDown";
 function GridCard() {
     return (
         <>

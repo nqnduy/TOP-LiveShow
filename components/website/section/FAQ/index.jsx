@@ -35,6 +35,6 @@ function FAQ() {
         </div>
     );
 }
+FAQ.propTypes = {};
 
 export default FAQ;
-<></>;

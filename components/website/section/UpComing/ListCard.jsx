@@ -49,5 +49,6 @@ function ListCard() {
         </div>
     );
 }
+ListCard.propTypes = {};
 
 export default ListCard;

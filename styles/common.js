@@ -286,7 +286,11 @@ const CommonStyle = () => {
                     width: 100%;
                 }
                 .list-style-auto {
+                    margin: 0;
                     list-style-type: initial;
+                    li {
+                        list-style-type: initial;
+                    }
                 }
                 .cur-pointer {
                     cursor: pointer;
