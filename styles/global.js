@@ -1,4 +1,7 @@
 import "antd/dist/antd.min.css";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+
 const GlobalStyle = () => (
     <style jsx global>{`
         /*
