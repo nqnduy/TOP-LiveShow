@@ -1,5 +1,5 @@
 
-import variable from "./variable";
+import { variable } from "./variable";
 const CommonStyle = () => {
     return (
         <>
@@ -17,11 +17,11 @@ const CommonStyle = () => {
                 .show {
                     display: block;
                 }
-                .container-fluid {
+                .container {
                     width: 100%;
                     max-width: 2500px;
-                    padding-right: 86px;
-                    padding-left: 86px;
+                    padding-right: var(--pdContainer);
+                    padding-left: var(--pdContainer);
                     margin-right: auto;
                     margin-left: auto;
                     position: relative;
@@ -31,15 +31,7 @@ const CommonStyle = () => {
                     //     padding-left: 15px;
                     // }
                 }
-                .container {
-                    width: 100%;
-                    padding-right: var(--gap);
-                    padding-left: var(--gap);
-                    margin-right: auto;
-                    margin-left: auto;
-                    position: relative;
-                    z-index: 9;
-                }
+
                 .noselect {
                     -webkit-touch-callout: none; /* iOS Safari */
                     -webkit-user-select: none; /* Safari */
@@ -51,31 +43,30 @@ const CommonStyle = () => {
                 }
                 .txMain {
                     color: #fff;
-                    font-size: 14px;
                     font-weight: 500;
                     line-height: 26px;
                     font-family: fm-m;
                     &.fz-36 {
-                        font-size: 36px;
-                        line-height: 46px;
+                        font-size: var(--fzr36);
+                        line-height: var(--lhr36);
                     }
                     &.fz-30 {
-                        font-size: 30px;
-                        line-height: 40px;
+                        font-size: var(--fzr30);
+                        line-height: var(--lhr30);
                     }
                     &.fz-21 {
-                        font-size: 21px;
+                        font-size: var(--fzr21);
                     }
                     &.fz-18 {
-                        font-size: 18px;
-                        line-height: 26px;
+                        font-size: var(--fzr18);
+                        line-height: var(--lhr18);
                     }
                     &.fz-16 {
-                        font-size: 16px;
-                        line-height: 26px;
+                        font-size: var(--fzr16);
+                        line-height: var(--lhr16);
                     }
                     &.fz-12 {
-                        font-size: 12px;
+                        font-size: var(--fzr12);
                     }
                     &.bold {
                         font-weight: fm-b;
@@ -144,10 +135,10 @@ const CommonStyle = () => {
                     flex-direction: column;
                 }
                 .PLMain {
-                    padding-left: 86px;
+                    padding-left: var(--pdContainer);
                 }
                 .PRMain {
-                    padding-right: 86px;
+                    padding-right: var(--pdContainer);
                 }
                 .PreviousShowList {
                     .swiper-slide {

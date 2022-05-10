@@ -7,7 +7,7 @@ import React from "react";
 export default function UpComingDetail() {
     return (
         <div className="UpComingShowDetail">
-            <div className="container-fluid" style={{ marginBottom: 80 }}>
+            <div className="container" style={{ marginBottom: 80 }}>
                 <div className="flex" style={{ gap: 85, justifyContent: "space-between" }}>
                     <div className="w50" style={{ paddingBottom: 40, marginBottom: 20, borderBottom: "1px solid rgba(255, 255, 255, 0.07);" }}>
                         <h2 className="txMain fz-36 bold" style={{ marginBottom: 40 }}>

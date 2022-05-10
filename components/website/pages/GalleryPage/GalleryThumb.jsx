@@ -5,7 +5,7 @@ export default function GalleryThumb() {
     return (
         <>
             <div className="GalleryThumb">
-                <div className="container-fluid">
+                <div className="container">
                     <div className="GalleryThumb__title txMain bold fz-21">Let's take a look back at the great moments in our gallery</div>
                     <div className="GalleryThumb__grid">
                         <GalleryCard image="/images/prv1.png" title="XinChao Da Lat" time="feb 27, 2022" />

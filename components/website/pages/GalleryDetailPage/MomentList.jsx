@@ -5,7 +5,7 @@ export default function MomentList() {
     return (
         <>
             <div className="MomentList">
-                <div className="container-fluid flexCOL flexAC">
+                <div className="container flexCOL flexAC">
                     <h3 className="txMain bold fz-36 textALC w50" style={{ marginBottom: 40 }}>
                         Let's take a look back at the great moments in our gallery
                     </h3>

@@ -4,7 +4,7 @@ import AccordionList from "./Accordion/AccordionList";
 function FAQ() {
     return (
         <div className="FAQ">
-            <div className="container-fluid flex">
+            <div className="container flex">
                 <div style={{ width: "43%" }}>
                     <TextTitle small_text="support on Faqs" big_text="Awesome to know" />
                     <p className="txMain purple normal" style={{ marginBottom: 40, width: "75%" }}>
@@ -23,7 +23,7 @@ function FAQ() {
                 </div>
             </div>
             <style jsx>{`
-                .container-fluid {
+                .container {
                     gap: 100px;
                     .headline {
                         font-size: 18px;

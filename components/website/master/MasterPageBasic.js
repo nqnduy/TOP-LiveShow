@@ -9,9 +9,11 @@ import GtagScript from "../tracking/GtagScript";
 
 const Providers = dynamic(() => import('components/website/contexts/Providers'));
 const Header = dynamic(() => import('components/website/elements/Header'));
+const Navigate = dynamic(() => import('components/website/elements/Navigate'));
 const Footer = dynamic(() => import('components/website/elements/Footer'));
 const GlobalStyle = dynamic(() => import('styles/global'));
 const CommonStyle = dynamic(() => import('styles/common'));
+const VariableStyle = dynamic(() => import('styles/variable'));
 const MasterPageBasic = ({ pageName, children }) => {
 	const router = useRouter();
 	const { device, breakpoint, orientation } = useNextResponsive();
@@ -48,10 +50,12 @@ const MasterPageBasic = ({ pageName, children }) => {
             {/* - STYLE OF THE WEBSITE */}
             <GlobalStyle />
             <CommonStyle />
+            <VariableStyle/>
             {/* - ADD MORE PROVIDER INSIDE THIS COMPONENT */}
             <Providers>
                 <Body>
                     <Header />
+                    <Navigate/>
                     <main className={[device, orientation, breakpoint].join(" ")}>{children}</main>
                     <Footer />
                 </Body>

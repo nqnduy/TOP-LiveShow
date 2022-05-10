@@ -6,7 +6,7 @@ export default function NewDetail() {
     return (
         <>
             <div className="NewDetail" style={{ marginBottom: 80 }}>
-                <div className="container-fluid flex" style={{ alignItems: "flex-start", justifyContent: "space-between", gap: 30 }}>
+                <div className="container flex" style={{ alignItems: "flex-start", justifyContent: "space-between", gap: 30 }}>
                     <div className="w70" style={{ paddingBottom: 40, marginBottom: 20, borderBottom: "1px solid rgba(255, 255, 255, 0.07);" }}>
                         <div className="NewDetail__info txMain upc normal purple">
                             <p className="txMain pink">New</p>

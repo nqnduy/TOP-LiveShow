@@ -7,7 +7,7 @@ function WhatNew({ hasViewMore = true }) {
                 <div style={{ textAlign: "center", marginBottom: 50 }}>
                     <TextTitle small_text="what news?" big_text="News and promotions" />
                 </div>
-                <div className="NewGrid container-fluid flex" style={{ gap: 40, margin: "0 auto", justifyContent: "space-between" }}>
+                <div className="NewGrid container flex" style={{ gap: 40, margin: "0 auto", justifyContent: "space-between" }}>
                     <div style={{ width: "45%", height: "100%" }}>
                         <NewsCard
                             image="/images/new1.png"

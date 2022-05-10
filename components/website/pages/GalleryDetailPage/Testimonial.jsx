@@ -21,7 +21,7 @@ export default function Testimonial() {
     };
     return (
         <div>
-            <div className="container-fluid">
+            <div className="container">
                 <div className="w50">
                     <TextTitle small_text="TESTIMONIALS" big_text="Take a look at our past customers success stories" />
                 </div>

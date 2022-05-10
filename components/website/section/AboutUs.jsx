@@ -4,7 +4,7 @@ import TextTitle from "../common/TextTitle";
 const AboutUs = (props) => {
     return (
         <div className="AboutUs">
-            <div className="container-fluid flexSB">
+            <div className="container flexSB">
                 <div style={{ width: "40%" }}>
                     <TextTitle small_text="About us" big_text="We always bring uniqueness to our customers" />
                     <p className="txMain normal purple" style={{ width: "95%", textAlign: "justify" }}>

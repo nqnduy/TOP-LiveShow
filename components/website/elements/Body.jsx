@@ -1,5 +1,5 @@
 import React from "react";
-import variable from "../../../styles/variable";
+import { variable } from "../../../styles/variable";
 export default function Body({ children }) {
     return (
         <>

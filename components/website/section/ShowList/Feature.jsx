@@ -18,10 +18,10 @@ export default function FeatureShowList() {
     return (
         <>
             <div className="FeatureShowList">
-                <div className="container-fluid flexSB">
+                <div className="container flexSB">
                     <TextTitle small_text="Watch it again" big_text="Feature shows" />
                 </div>
-                <div className="container-fluid">
+                <div className="container">
                     <Slider className="PreviousShowList PLMain" {...settings}>
                         <PreviousShowCard image="/images/prv1.png" title="Live show" event="2">
                             <Button color="white">Watch now</Button>

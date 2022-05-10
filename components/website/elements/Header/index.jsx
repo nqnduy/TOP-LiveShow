@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import Logo from "../../common/Logo";
 import SocialGroup from "../../common/SocialGroup";
 function Header() {
     const [fixed, setFixed] = useState(false);
@@ -20,8 +21,8 @@ function Header() {
     return (
         <header className={fixed ? "active" : ""} onScroll={handleScroll}>
             <div className="HeaderCTA">
-                <div className="container-fluid">
-                    <div className="HeaderCTA-title txMain upc">
+                <div className="container">
+                    <div className="HeaderCTA-title txMain upc purple">
                         Have any Questions? Call Us <strong>028 6673 8686</strong>
                     </div>
                     <div className="HeaderCTA-button">
@@ -37,36 +38,34 @@ function Header() {
                 </div>
             </div>
             <div className="HeaderMenu">
-                <div className="container-fluid">
-                    <div className="logo">
-                        <Image src="/images/icons/logo.svg" alt="Logo" width={107} height={40} />
-                    </div>
+                <div className="container">
+                    <Logo />
                     <ul className="menu">
                         <li>
                             <Link href="/about-us">
-                                <a className="txMain bold hoverText hoverText-pink" href="">
+                                <a className="txMain fz-16 bold hoverText hoverText-pink" href="">
                                     About Us
                                 </a>
                             </Link>
                         </li>
                         <li>
                             <Link href="/upcoming-shows">
-                                <a className="txMain bold hoverText hoverText-pink">Upcoming Shows</a>
+                                <a className="txMain fz-16 bold hoverText hoverText-pink">Upcoming Shows</a>
                             </Link>
                         </li>
                         <li>
                             <Link href="/gallery">
-                                <a className="txMain bold hoverText hoverText-pink">Gallery</a>
+                                <a className="txMain fz-16 bold hoverText hoverText-pink">Gallery</a>
                             </Link>
                         </li>
                         <li>
                             <Link href="/new-promotion">
-                                <a className="txMain bold hoverText hoverText-pink">News & Promotions</a>
+                                <a className="txMain fz-16 bold hoverText hoverText-pink">News & Promotions</a>
                             </Link>
                         </li>
                         <li>
                             <Link href="/contact">
-                                <a className="txMain bold hoverText hoverText-pink">Contact</a>
+                                <a className="txMain fz-16 bold hoverText hoverText-pink">Contact</a>
                             </Link>
                         </li>
                     </ul>
@@ -80,7 +79,6 @@ function Header() {
                     </div>
                 </div>
             </div>
-
             <style jsx>{`
                 $purple-cl: #b8b7d0;
                 header {
@@ -97,20 +95,16 @@ function Header() {
                         width: 100%;
                         display: flex;
                         z-index: 100;
-                        height: 50px;
                         align-items: center;
                         background-color: #060070;
-                        .container-fluid {
+                        .container {
                             display: flex;
                             align-items: center;
                             justify-content: space-between;
                             height: 100%;
+                            padding-block: 1em;
                         }
                         &-title {
-                            font-size: 14px;
-                            text-transform: uppercase;
-                            color: $purple-cl;
-
                             strong {
                                 color: white;
                             }
@@ -150,7 +144,6 @@ function Header() {
                         height: 80px;
                         width: 100%;
                         transition: ease-in 0.5s;
-
                         background-color: transparent;
                         &:before {
                             content: "";
@@ -163,7 +156,7 @@ function Header() {
                             pointer-events: none;
                             transition: ease-out 0.5s;
                         }
-                        .container-fluid {
+                        .container {
                             height: 100%;
                             display: flex;
                             align-items: center;
@@ -178,8 +171,17 @@ function Header() {
                             left: 50%;
                             transform: translate(-50%);
                             li {
-                                font-size: 16px;
-                                line-height: 16px;
+                                width: max-content;
+                            }
+                        }
+                        @media (max-width: 1200px) {
+                            .menu {
+                                gap: 32px;
+                            }
+                        }
+                        @media (max-width: 1100px) {
+                            .menu {
+                                gap: 40px;
                             }
                         }
                         .action {
@@ -201,6 +203,7 @@ function Header() {
                             }
                         }
                     }
+
                     &.active {
                         .HeaderCTA {
                             display: none;
@@ -220,6 +223,11 @@ function Header() {
                                 animation-duration: 1s;
                             }
                         }
+                    }
+                }
+                @media (max-width: 1024px) {
+                    header {
+                        display: none;
                     }
                 }
             `}</style>

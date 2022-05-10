@@ -5,7 +5,7 @@ function Footer() {
         <>
             <footer className="Footer" style={{ backgroundColor: "#060070" }}>
                 <div className="BGWrap"></div>
-                <div className="container-fluid">
+                <div className="container">
                     <div className="backBannerFooter">
                         <div style={{ width: "53%" }}>
                             <p className="txMain bold fz-36" style={{ marginBottom: 6 }}>

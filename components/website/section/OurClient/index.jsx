@@ -5,7 +5,7 @@ import React from "react";
 export default function OurClient() {
     return (
         <div className="OurClient">
-            <div className="container-fluid flex">
+            <div className="container flex">
                 <div className="w50">
                     <TextTitle
                         small_text="Our Clients"

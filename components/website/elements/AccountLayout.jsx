@@ -6,7 +6,7 @@ export default function AccountLayout({ children }) {
     return (
         <>
             <div className="Account">
-                <div className="container-fluid flexSB">
+                <div className="container flexSB">
                     <div className="w30">
                         <div className="SideBar">
                             <div className="flexCOL flexAC">
@@ -44,7 +44,7 @@ export default function AccountLayout({ children }) {
                         top: 200px;
                         bottom: 70px;
                     }
-                    .container-fluid {
+                    .container {
                         gap: 85px;
                         align-items: flex-start;
                     }

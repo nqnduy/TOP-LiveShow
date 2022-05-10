@@ -30,7 +30,7 @@ function SearchBar() {
                 .Search {
                     background-color: #060070;
                     border-radius: 20px;
-                    margin: 0 86px;
+                    margin: 0 var(--pdContainer);
                     padding: 30px 40px;
                     display: flex;
                     align-items: center;
@@ -44,6 +44,9 @@ function SearchBar() {
                         align-items: center;
                         gap: 150px;
                         cursor: pointer;
+                        @media (max-width: 1024px) {
+                            gap: 120px;
+                        }
                         &__item {
                             color: #b8b7d0;
                             p {

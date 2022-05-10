@@ -8,7 +8,7 @@ export default function NewsPromotionList() {
     return (
         <>
             <div className="NewsPromotion">
-                <div className="container-fluid">
+                <div className="container">
                     <div className="flexSB">
                         <TextTitle big_text="News & Promotion" />
                         <SortDropdown title="All categories" />

@@ -9,7 +9,7 @@ function GridCard() {
                 <SortDropdown title="Relevance" />
                 <SortDropdown title="All categories" />
             </div>
-            <div className="GridCard container-fluid">
+            <div className="GridCard container">
                 <ShowCard
                     image="/images/card1.png"
                     time="Feb 27, 2022"

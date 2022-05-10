@@ -36,6 +36,7 @@ function HeroBanner({ searchBar }) {
                     padding-top: 50px;
                     width: 100%;
                     z-index: 9;
+                    overflow: hidden;
                     .banner {
                         width: 100%;
                         height: 80vh;
