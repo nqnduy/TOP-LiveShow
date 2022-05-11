@@ -1,5 +1,5 @@
 import React from "react";
-
+import { variable } from "styles/variable";
 export default function Hamburger({ open, ...e }) {
     console.log("open:", open);
     return (
@@ -12,12 +12,12 @@ export default function Hamburger({ open, ...e }) {
             <style jsx>{`
                 $t: 0.2s;
                 $delay: 0.05s;
-                $background: #fff;
+                $background: ${variable.color.purple};
                 .menu {
                     display: none;
-                    position: absolute;
+                    position: fixed;
                     overflow: hidden;
-                    padding: 10px;
+                    padding: 8px;
                     top: 20px;
                     right: 20px;
                     z-index: 110;
@@ -36,6 +36,18 @@ export default function Hamburger({ open, ...e }) {
                             }
                         }
                     }
+                    &:hover {
+                        &:before,
+                        &:after {
+                            background: ${variable.color.secondary};
+                            transition: 0.3s ease;
+                        }
+                        .bar {
+                            background: ${variable.color.secondary};
+                            transition: 0.3s ease;
+                        }
+                    }
+
                     &.back {
                         &:before {
                             transform: translateX(-120%);
@@ -57,29 +69,41 @@ export default function Hamburger({ open, ...e }) {
                     &:before {
                         content: "";
                         display: block;
-                        width: 50px;
-                        height: 5px;
+                        width: 40px;
+                        height: 4px;
                         background: $background;
+                        transition: 0.3s ease;
                     }
                     &:after {
                         content: "";
                         display: block;
-                        width: 50px;
-                        height: 5px;
+                        width: 40px;
+                        height: 4px;
                         background: $background;
+                        transition: 0.3s ease;
                     }
+
                     .bar {
                         display: block;
-                        width: 50px;
-                        height: 5px;
+                        width: 40px;
+                        height: 4px;
                         background: $background;
-                        margin: 10px 0;
+                        margin: 8px 0;
+                        transition: 0.3s ease;
+
                         &:last-child {
                             opacity: 0;
                             transform: rotate(-45deg);
                             position: absolute;
-                            top: 15px;
+                            top: 12px;
                         }
+                    }
+                }
+                @media (max-width: 1180px) and (max-height: 820px) {
+                    .menu {
+                        display: block;
+                        top: 5px;
+                        right: 5px;
                     }
                 }
                 @media (max-width: 1024px) {

@@ -186,6 +186,41 @@ export default function Navigate() {
                             display: flex;
                         }
                     }
+                    @media (max-width: 1180px) and (max-height: 820px) {
+                        .Navigate {
+                            display: flex;
+                        }
+                    }
+                    @media (max-width: 880px) {
+                        .Navigate {
+                            &.open {
+                                width: 75vw;
+                            }
+                        }
+                    }
+                    @media (max-width: 690px) {
+                        .Navigate {
+                            &.open {
+                                width: 100%;
+                            }
+                        }
+                    }
+                    @media (max-width: 520px) {
+                        .Navigate {
+                            &__content {
+                                .menu {
+                                    li {
+                                        a {
+                                            font-size: 30px;
+                                        }
+                                    }
+                                }
+                            }
+                            &.open {
+                                width: 100%;
+                            }
+                        }
+                    }
                 }
             `}</style>
         </>

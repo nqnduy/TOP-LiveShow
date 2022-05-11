@@ -197,13 +197,14 @@ const CommonStyle = () => {
 
                 .slick-arrow {
                     top: -90px;
+                    z-index: 90;
                     &.slick-next,
                     &.slick-prev {
                         cursor: pointer;
-                        width: 40px;
+                        width: var(--arrowSize);
                         background-color: rgba(255, 255, 255, 0.1);
                         border-radius: 50%;
-                        height: 40px;
+                        height: var(--arrowSize);
                         transition: 0.4s ease;
                         img {
                             position: absolute;
@@ -228,11 +229,12 @@ const CommonStyle = () => {
                     &.slick-next:before {
                         display: none;
                     }
+                    --arrowPosition: calc((var(--pdContainer)) - (var(--cardRange)));
                     &.slick-next {
-                        right: 86px;
+                        right: var(--arrowPosition);
                     }
                     &.slick-prev {
-                        right: 140px;
+                        right: calc((var(--arrowPosition)) + (var(--arrowRange)));
                         left: initial;
                     }
                 }

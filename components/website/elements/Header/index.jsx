@@ -225,6 +225,11 @@ function Header() {
                         }
                     }
                 }
+                @media (max-width: 1180px) and (max-height: 820px) {
+                    header {
+                        display: none;
+                    }
+                }
                 @media (max-width: 1024px) {
                     header {
                         display: none;

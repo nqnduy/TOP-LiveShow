@@ -2,7 +2,7 @@ export default function Button({ children, width, color }) {
     return (
         <>
             <button className={`Button ${width} ${color}`}>
-                <div>{children}</div>
+                <div className="txMain fz-16">{children}</div>
             </button>
             <style jsx>{`
                 .Button {
@@ -17,7 +17,6 @@ export default function Button({ children, width, color }) {
                     width: max-content;
                     div {
                         background-color: #e71882;
-                        font-size: 16px;
                         padding: 14px 28px 17px 28px;
                         border-radius: 15px;
                         font-family: fm-b;
@@ -28,6 +27,9 @@ export default function Button({ children, width, color }) {
                         align-items: center;
                         justify-content: center;
                         gap: 10px;
+                        @media (max-width: 830px) {
+                            padding: 10px 22px 14px 22px;
+                        }
                     }
                     &::before {
                         content: "";

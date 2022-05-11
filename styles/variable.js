@@ -41,6 +41,11 @@ const VariableStyle = () => {
                     --lhr16: 26px;
 
                     --frz12: 12px;
+
+                    --cardRange: 26px;
+
+                    --arrowSize: 40px;
+                    --arrowRange: 54px;
                     @media (max-width: 1310px) {
                         --fzr16: 15px;
                     }
@@ -48,10 +53,16 @@ const VariableStyle = () => {
                         font-size: 13px;
                         --fzr16: 14px;
                         --pdContainer: 60px;
+                        --fzr18: 16px;
+                        --lhr18: 24px;
                     }
                     @media (max-width: 1024px) {
                         --fzr16: 13px;
                         --pdContainer: 55px;
+                    }
+                    @media (max-width: 500px){
+                        --arrowSize: 38px;
+                        --arrowRange: 45px;
                     }
                 }
             `}</style>

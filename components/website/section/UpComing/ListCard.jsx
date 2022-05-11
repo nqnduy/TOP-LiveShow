@@ -14,36 +14,100 @@ function ListCard() {
         initialSlide: 2,
         nextArrow: <ArrowNext />,
         prevArrow: <ArrowPrev />,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    centerPadding: "50px",
+                },
+            },
+            {
+                breakpoint: 1024,
+                settings: {
+                    centerPadding: "0px",
+                },
+            },
+            {
+                breakpoint: 920,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    centerPadding: "50px",
+                },
+            },
+            {
+                breakpoint: 870,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    centerPadding: "0px",
+                },
+            },
+            {
+                breakpoint: 630,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerPadding: "0px",
+                },
+            },
+        ],
     };
     return (
-        <div className="PLMain">
-            <Slider {...settings}>
-                <ShowCard
-                    image="/images/card1.png"
-                    time="Feb 27, 2022"
-                    location="Ho Chi Minh City"
-                    title="This is title of liveshow. Max long two line"
-                    ticket="25"
-                />
-                <ShowCard image="/images/card2.png" time="Feb 27, 2022" location="Paris City" title="France Rock Music Conference March 2022" ticket="25" />
-                <ShowCard
-                    image="/images/card3.png"
-                    time="Mar 10, 2022"
-                    location="Ho Chi Minh City"
-                    title="Ho Chi Minh City Vietnam Web Submit 2022"
-                    ticket="25"
-                />
-                <ShowCard image="/images/card4.png" time="Mar 10, 2022" location="Ho Chi Minh City" title="Tokyo Digital Conference ShakeUp" ticket="25" />
-            </Slider>
+        <div className="ListCard PLMain">
+            <div>
+                <Slider {...settings}>
+                    <ShowCard
+                        image="/images/card1.png"
+                        time="Feb 27, 2022"
+                        location="Ho Chi Minh City"
+                        title="This is title of liveshow. Max long two line"
+                        ticket="25"
+                    />
+                    <ShowCard image="/images/card2.png" time="Feb 27, 2022" location="Paris City" title="France Rock Music Conference March 2022" ticket="25" />
+                    <ShowCard
+                        image="/images/card3.png"
+                        time="Mar 10, 2022"
+                        location="Ho Chi Minh City"
+                        title="Ho Chi Minh City Vietnam Web Submit 2022"
+                        ticket="25"
+                    />
+                    <ShowCard image="/images/card4.png" time="Mar 10, 2022" location="Ho Chi Minh City" title="Tokyo Digital Conference ShakeUp" ticket="25" />
+                </Slider>
+            </div>
+
             <style jsx global>{`
                 .slick-arrow {
-                    top: -70px;
+                    top: -62px;
                 }
                 .slick-list {
                     padding: 0 !important;
                 }
                 .showCard {
-                    margin-right: 26px;
+                    margin-right: var(--cardRange);
+                }
+                @media (max-width: 1024px) {
+                    .ListCard {
+                        padding-right: calc((var(--pdContainer)) - (var(--cardRange)));
+                    }
+                }
+                @media (max-width: 500px) {
+                    .ListCard {
+                        & > div {
+                            padding-inline: 15px;
+                        }
+
+                        .slick-arrow {
+                            top: 52%;
+                            &.slick-next {
+                                right: -22px;
+                            }
+                            &.slick-prev {
+                                right: 0;
+                                left: -47px;
+                            }
+                        }
+                    }
                 }
             `}</style>
         </div>

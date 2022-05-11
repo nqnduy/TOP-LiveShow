@@ -47,11 +47,43 @@ function SearchBar() {
                         @media (max-width: 1024px) {
                             gap: 120px;
                         }
+                        @media (max-width: 1000px) {
+                            gap: 90px;
+                        }
+                        @media (max-width: 900px) {
+                            gap: 60px;
+                        }
+                        @media (max-width: 800px) {
+                            gap: 40px;
+                        }
+                        @media (max-width: 758px) {
+                            gap: 70px;
+                        }
                         &__item {
                             color: #b8b7d0;
                             p {
                                 margin-bottom: 5px;
                                 font-family: fm-m;
+                            }
+                        }
+                    }
+                }
+                @media (max-width: 830px) {
+                    .Search {
+                        padding: 20px 30px;
+                        &-filter {
+                        }
+                    }
+                }
+                @media (max-width: 758px) {
+                    .Search {
+                        flex-direction: column;
+                        &-filter {
+                            flex-wrap: wrap;
+                            margin-bottom: 20px;
+                            gap: 40px;
+                            &__item {
+                                flex: auto;
                             }
                         }
                     }

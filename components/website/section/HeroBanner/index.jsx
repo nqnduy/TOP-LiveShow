@@ -6,13 +6,13 @@ function HeroBanner({ searchBar }) {
             <div className="HeroBanner">
                 <div className="banner">
                     <div className="banner-title">
-                        <div style={{ marginBottom: 30 }}>
+                        <div className="item1">
                             <Image src="/images/phongtra1.png" alt="" width={229} height={28.5} layout="intrinsic" />
                         </div>
-                        <div style={{ marginBottom: 50 }}>
+                        <div className="item2">
                             <Image src="/images/title-banner.png" alt="" width={609} height={321} layout="intrinsic" />
                         </div>
-                        <div style={{ display: "flex", alignItems: "center", gap: 40 }}>
+                        <div className="item3">
                             <div>
                                 <Image src="/images/time.png" alt="" width={137} height={47} layout="intrinsic" />
                             </div>
@@ -21,10 +21,13 @@ function HeroBanner({ searchBar }) {
                             </div>
                         </div>
                     </div>
-                    <div style={{ marginTop: "17vh", width: "35%" }}>
+                    <div className="character">
+                        <img src="/images/character.png" alt="" />
+                    </div>
+                    <div className="pmc-name">
                         <Image src="/images/pmc.png" alt="" width={186} height={116.28} layout="intrinsic" />
                     </div>
-                    <div style={{ marginTop: "36vh" }}>
+                    <div className="erik-name">
                         <Image src="/images/erik-name.png" alt="" width={96} height={60} layout="intrinsic" />
                     </div>
                 </div>
@@ -32,6 +35,7 @@ function HeroBanner({ searchBar }) {
             {searchBar && <SearchBar />}
             <style jsx>{`
                 .HeroBanner {
+                    --widthCharacter: 670px;
                     width: 100%;
                     padding-top: 50px;
                     width: 100%;
@@ -50,6 +54,162 @@ function HeroBanner({ searchBar }) {
                             display: flex;
                             flex-direction: column;
                             align-items: center;
+                            .item1 {
+                                margin-bottom: 30px;
+                            }
+                            .item2 {
+                                margin-bottom: 50px;
+                            }
+                            .item3 {
+                                display: flex;
+                                align-items: center;
+                                gap: 40px;
+                            }
+                        }
+                        .character {
+                            position: absolute;
+                            bottom: 0;
+                            right: 15vw;
+                            width: var(--widthCharacter);
+                            height: auto;
+                        }
+                        .pmc-name {
+                            position: absolute;
+                            bottom: 50vh;
+                            right: 40vw;
+                        }
+                        .erik-name {
+                            bottom: 35vh;
+                            right: 8vw;
+                            position: absolute;
+                        }
+                    }
+                }
+                @media (max-width: 1300px) and (max-height: 969px) {
+                    .HeroBanner {
+                        --widthCharacter: 600px;
+
+                        .banner {
+                            &-title {
+                                width: 40%;
+                                margin-left: 3vw;
+                            }
+                            .pmc-name {
+                                right: 34vw;
+                                bottom: 50vh;
+                            }
+                            .erik-name {
+                                right: 5vw;
+                                bottom: 40vh;
+                            }
+                            .character {
+                                right: 10vw;
+                            }
+                        }
+                    }
+                }
+                @media (max-width: 1100px) {
+                    .HeroBanner {
+                        .banner {
+                            &-title {
+                                margin-top: 10vh;
+                            }
+                            .character {
+                                right: 8vw;
+                            }
+                        }
+                    }
+                }
+                @media (max-height: 850px) {
+                    .HeroBanner {
+                        --widthCharacter: 580px;
+
+                        .banner {
+                            height: 95vh;
+                            &-title {
+                                width: 50%;
+                            }
+
+                            .erik-name {
+                            }
+                        }
+                    }
+                }
+                @media (max-width: 1024px) {
+                    .HeroBanner {
+                        padding-top: 0;
+
+                        .banner {
+                            height: 90vh;
+                            .character {
+                                right: 3vw;
+                            }
+                            &-title {
+                                margin-top: 10vh;
+                                .item1 {
+                                    margin-bottom: 20px;
+                                }
+                            }
+                            .pmc-name {
+                                bottom: 62vh;
+                                right: 28vw;
+                            }
+                            .erik-name {
+                                bottom: 50vh;
+                                right: 3vw;
+                            }
+                        }
+                    }
+                }
+                @media (max-width: 880px) {
+                    .HeroBanner {
+                        --widthCharacter: 500px;
+                        padding-top: 0;
+                        .banner {
+                            height: 105vh;
+                            flex-direction: column;
+                            align-items: center;
+                            &-title {
+                                margin-top: 10vh;
+                                width: 70%;
+                                .item2 {
+                                    margin-bottom: 20px;
+                                }
+                            }
+                            .character {
+                                right: 50%;
+                                transform: translate(50%);
+                            }
+                            .pmc-name {
+                                bottom: 30vh;
+                                left: 5vw;
+                            }
+                            .erik-name {
+                                bottom: 30vh;
+                                right: 5vw;
+                            }
+                        }
+                    }
+                }
+                @media (max-width: 600px) {
+                    .HeroBanner {
+                        .banner {
+                            .pmc-name {
+                                bottom: 35vh;
+                            }
+                            .erik-name {
+                                bottom: 33vh;
+                            }
+                        }
+                    }
+                }
+                @media (max-width: 570px) {
+                    .HeroBanner {
+                        .banner {
+                            .pmc-name,
+                            .erik-name {
+                                display: none;
+                            }
                         }
                     }
                 }
