@@ -60,9 +60,17 @@ const VariableStyle = () => {
                         --fzr16: 13px;
                         --pdContainer: 55px;
                     }
-                    @media (max-width: 500px){
+                    @media (max-width: 500px) {
                         --arrowSize: 38px;
                         --arrowRange: 45px;
+                        --pdContainer: 45px;
+                    }
+                    @media (max-width: 400px) {
+                        --pdContainer: 25px;
+                    }
+                    @media (max-width: 350px) {
+                        --pdContainer: 10px;
+                        --cardRange:5px;
                     }
                 }
             `}</style>

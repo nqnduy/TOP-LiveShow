@@ -51,6 +51,15 @@ function ListCard() {
                     centerPadding: "0px",
                 },
             },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerPadding: "0px",
+                    arrows: false,
+                },
+            },
         ],
     };
     return (
@@ -106,6 +115,13 @@ function ListCard() {
                                 right: 0;
                                 left: -47px;
                             }
+                        }
+                    }
+                }
+                @media (max-width: 400px) {
+                    .ListCard {
+                        & > div {
+                            padding-inline: 0px;
                         }
                     }
                 }

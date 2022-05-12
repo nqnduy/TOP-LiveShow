@@ -4,7 +4,7 @@ function WhatNew({ hasViewMore = true }) {
     return (
         <>
             <div className="WhatNew">
-                <div style={{ textAlign: "center", marginBottom: 50 }}>
+                <div className="PLMain" style={{ textAlign: "center", marginBottom: 50 }}>
                     <TextTitle small_text="what news?" big_text="News and promotions" />
                 </div>
                 <div className="NewGrid container flex" style={{ gap: 40, margin: "0 auto", justifyContent: "space-between" }}>

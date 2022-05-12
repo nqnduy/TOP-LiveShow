@@ -10,6 +10,16 @@ function ShowList() {
                 {/* <NextPrev /> */}
             </div>
             <Previous />
+            <style jsx global>{`
+                @media (max-width: 500px) {
+                    .PreviousShow {
+                        .TextTitle {
+                            text-align: center;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            `}</style>
         </div>
     );
 }
