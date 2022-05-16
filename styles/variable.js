@@ -40,8 +40,9 @@ const VariableStyle = () => {
                     --fzr16: 16px;
                     --lhr16: 26px;
 
-                    --frz12: 12px;
+                    --fzr12: 12px;
 
+                    --fzrMain: 14px;
                     --cardRange: 26px;
 
                     --arrowSize: 40px;
@@ -55,22 +56,33 @@ const VariableStyle = () => {
                         --pdContainer: 60px;
                         --fzr18: 16px;
                         --lhr18: 24px;
+                        --fzr21: 19px;
+                        --fzr30: 28px;
                     }
                     @media (max-width: 1024px) {
                         --fzr16: 13px;
                         --pdContainer: 55px;
+                        --fzr30: 25px;
+                        --fzr21: 17px;
                     }
+                    @media (max-width: 800px) {
+                        --fzr21: 16px;
+                        --fzr18: 15px;
+                    }
+
                     @media (max-width: 500px) {
+                        font-size: 12px;
                         --arrowSize: 38px;
                         --arrowRange: 45px;
                         --pdContainer: 45px;
+                        --fzr30: 22px;
                     }
                     @media (max-width: 400px) {
                         --pdContainer: 25px;
                     }
                     @media (max-width: 350px) {
                         --pdContainer: 10px;
-                        --cardRange:5px;
+                        --cardRange: 5px;
                     }
                 }
             `}</style>

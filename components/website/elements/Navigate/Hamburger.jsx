@@ -1,7 +1,6 @@
 import React from "react";
 import { variable } from "styles/variable";
 export default function Hamburger({ open, ...e }) {
-    console.log("open:", open);
     return (
         <>
             <div className={`menu ${open ? "active" : "back"} `} {...e}>

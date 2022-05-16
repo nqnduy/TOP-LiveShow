@@ -1,13 +1,11 @@
-import React, { useState } from "react";
-
-function Accordion({ title, content }) {
-    const [isOpen, setIsOpen] = useState(false);
-
+import React from "react";
+import { variable } from "styles/variable";
+function Accordion({ title, content, open, ...e }) {
     return (
         <>
-            <div className={`Accordion flexSB ${isOpen ? "open" : ""}`} onClick={() => setIsOpen(!isOpen)}>
+            <div className={`Accordion flexSB ${open ? "open" : ""}`} {...e}>
                 <div>
-                    <div className="txMain title">{title}</div>
+                    <div className="txMain title fz-21 purple">{title}</div>
                     <div className="txMain purple normal fz-16 content">{content}</div>
                 </div>
                 <div>
@@ -19,14 +17,15 @@ function Accordion({ title, content }) {
             </div>
             <style jsx global>{`
                 .Accordion {
+                    --iconSize: 20px;
+                    width: 100%;
                     column-gap: 45px;
                     border-bottom: 1px solid rgba(255, 255, 255, 0.07);
                     padding: 35px 0 24px 0;
                     transition: 0.4s ease-out;
+                    cursor: pointer;
                     .title {
-                        font-size: 21px;
-                        color: #b8b7d0;
-                        cursor: pointer;
+                        transition: 0.2s ease-out;
                     }
                     .fz-16 {
                         margin-top: 13px;
@@ -39,7 +38,7 @@ function Accordion({ title, content }) {
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        padding: 20px;
+                        padding: var(--iconSize);
                         border: 1px solid rgba(255, 255, 255, 0.5);
                         border-radius: 50%;
                         cursor: pointer;
@@ -62,8 +61,25 @@ function Accordion({ title, content }) {
                             transition: 0.2s ease-out;
                         }
                     }
+                    &:hover {
+                        .title {
+                            color: #fff;
+                            transition: 0.2s ease-out;
+                        }
+                        .icon {
+                            background-color: ${variable.color.secondary};
+                            border-color: ${variable.color.secondary};
+                            transition: 0.2s ease-out;
+                        }
+                    }
                     &.open {
+                        width: 100%;
+
                         transition: 0.4s ease-out;
+                        .title {
+                            color: #fff;
+                            transition: 0.2s ease-out;
+                        }
                         .content {
                             opacity: 1;
                             height: auto;
@@ -71,8 +87,8 @@ function Accordion({ title, content }) {
                             transition: 0.4s ease-out;
                         }
                         .icon {
-                            background-color: #e71882;
-                            border-color: #e71882;
+                            background-color: ${variable.color.secondary};
+                            border-color: ${variable.color.secondary};
                             transition: 0.2s ease-out;
                             .y {
                                 opacity: 0;
@@ -84,6 +100,11 @@ function Accordion({ title, content }) {
                                 transition: 0.2s ease-out;
                             }
                         }
+                    }
+                }
+                @media (max-width: 1220px) {
+                    .Accordion {
+                        --iconSize: 18px;
                     }
                 }
             `}</style>

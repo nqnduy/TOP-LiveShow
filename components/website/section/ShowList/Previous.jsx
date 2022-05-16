@@ -44,6 +44,12 @@ function PreviousShowList() {
                 },
             },
             {
+                breakpoint: 500,
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+            {
                 breakpoint: 400,
                 settings: {
                     slidesToShow: 1,
@@ -101,18 +107,17 @@ function PreviousShowList() {
                 }
                 @media (max-width: 500px) {
                     .PreviousShowList {
-                        padding-right: 0;
-
-                        & > div {
-                            padding-inline: 15px;
-                        }
                         .slick-current {
                             padding-right: var(--pdContainer);
                         }
+                        & > div {
+                            padding-inline: 15px;
+                        }
+
                         .slick-arrow {
                             top: 52%;
                             &.slick-next {
-                                right: 14px;
+                                right: -32px;
                             }
                             &.slick-prev {
                                 right: 0;
@@ -123,6 +128,7 @@ function PreviousShowList() {
                 }
                 @media (max-width: 400px) {
                     .PreviousShowList {
+                        margin-left: 20px;
                         padding-left: 0px;
                         .slick-current {
                             padding-right: calc(var(--pdContainer) + 15px);
