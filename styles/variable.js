@@ -52,6 +52,13 @@ const VariableStyle = () => {
                     --arrowRange: 54px;
                     @media (max-width: 1310px) {
                         --fzr16: 15px;
+                        --fzr36: 32px;
+                        --lhr36: 40px;
+                    }
+                    @media (max-width: 1110px) {
+                        --fzr16: 15px;
+                        --fzr36: 28px;
+                        --lhr36: 38px;
                     }
                     @media (max-width: 1220px) {
                         font-size: 13px;
@@ -72,9 +79,15 @@ const VariableStyle = () => {
                         --fzr30: 25px;
                         --fzr21: 17px;
                     }
-                    @media (max-width: 800px) {
+                    @media (max-width: 920px) {
+                        --fzr36: 25px;
+                        --lhr36: 35px;
+                    }
+                    @media (max-width: 830px) {
                         --fzr21: 16px;
                         --fzr18: 15px;
+                        --fzr36: 22px;
+                        --lhr36: 30px;
                     }
 
                     @media (max-width: 500px) {

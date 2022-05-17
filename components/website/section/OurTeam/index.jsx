@@ -136,6 +136,9 @@ export default function OurTeam({ type }) {
                     }
                     @media (max-width: 820px) {
                         .OurTeam {
+                            --fzr18: 18px;
+                            --fzr16: 15px;
+                            --fzr21: 19px;
                             --arrowPositionLeft: 50%;
                             --arrowPositionTop: 110%;
                             &__wrapper {

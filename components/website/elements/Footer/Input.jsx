@@ -60,6 +60,28 @@ function Input() {
                         }
                     }
                 }
+
+                @media (max-width: 1024px) {
+                    .Input {
+                        padding: 5px 18px;
+                        input {
+                            font-size: 14px;
+                        }
+                        button {
+                            width: 40px;
+                            height: 35px;
+                            img {
+                                --valueIcon: 20px;
+                            }
+                            &:hover {
+                                img {
+                                    --valueIcon: 22px;
+                                    transition: ease-in 0.3s;
+                                }
+                            }
+                        }
+                    }
+                }
             `}</style>
         </>
     );

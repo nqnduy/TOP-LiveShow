@@ -7,13 +7,13 @@ function Footer() {
                 <div className="BGWrap"></div>
                 <div className="container">
                     <div className="backBannerFooter">
-                        <div style={{ width: "53%" }}>
+                        <div className="backBannerFooter__textArea">
                             <p className="txMain bold fz-36" style={{ marginBottom: 6 }}>
                                 Sign up to our newsletter
                             </p>
                             <p className="txMain normal fz-16">Don’t miss our future updates!</p>
                         </div>
-                        <div style={{ width: "48%" }}>
+                        <div className="backBannerFooter__inputArea">
                             <Input />
                         </div>
                     </div>
@@ -63,6 +63,13 @@ function Footer() {
                     justify-content: space-between;
                     padding: 68px 86px;
                     border-radius: 25px;
+                    gap: 30px;
+                    &__textArea {
+                        width: 53%;
+                    }
+                    &__inputArea {
+                        width: 48%;
+                    }
                 }
                 .Footer {
                     padding-top: 30px;
@@ -100,6 +107,83 @@ function Footer() {
 
                         .icon {
                             cursor: pointer;
+                        }
+                    }
+                }
+                @media (max-width: 1150px) {
+                    .backBannerFooter {
+                        padding: 68px 70px;
+                    }
+                }
+                @media (max-width: 1024px) {
+                    .backBannerFooter {
+                        padding: 60px;
+                    }
+                }
+                @media (max-width: 980px) {
+                    .backBannerFooter {
+                        padding: 60px 50px;
+                    }
+                }
+                @media (max-width: 848px) {
+                    .backBannerFooter {
+                        padding: 50px 40px;
+                    }
+                }
+                @media (max-width: 800px) {
+                    .Footer {
+                        &__navigate {
+                            .menu {
+                                display: grid;
+                                grid-template-columns: repeat(3, 1fr);
+                                li {
+                                    align-self: flex-end;
+                                    justify-self: center;
+                                }
+                            }
+                        }
+                    }
+                }
+                @media (max-width: 700px) {
+                    .Footer {
+                        &__navigate {
+                            .menu {
+                                gap: 30px !important;
+                                grid-template-columns: repeat(2, 1fr);
+                                li {
+                                    justify-self: flex-start;
+                                }
+                            }
+                        }
+                    }
+                }
+                @media (max-width: 755px) {
+                    .backBannerFooter {
+                        padding: 50px 40px;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        &__textArea {
+                            width: 100%;
+                            text-align: center;
+                        }
+                        &__inputArea {
+                            width: 80%;
+                        }
+                    }
+                }
+                @media (max-width: 755px) {
+                    .backBannerFooter {
+                        padding: 40px 30px;
+                    }
+                }
+                @media (max-width: 520px) {
+                    .Footer {
+                        &__navigate {
+                            .menu {
+                                gap: 20px !important;
+                                grid-template-columns: repeat(1, 1fr);
+                            }
                         }
                     }
                 }
