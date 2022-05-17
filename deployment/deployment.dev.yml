@@ -71,7 +71,7 @@ spec:
     spec:
       containers:
         - name: topls-duy
-          image: 'asia.gcr.io/top-group-k8s/topls-duy:2022-05-17-16-29-39'
+          image: 'asia.gcr.io/top-group-k8s/topls-duy:2022-05-17-17-33-32'
           ports:
             - containerPort: 3000
           resources: {}
