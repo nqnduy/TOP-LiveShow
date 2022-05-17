@@ -29,6 +29,11 @@ const Homepage = (props) => {
                 .OurTeam {
                     margin-bottom: 100px;
                 }
+                @media (max-width: 820px) {
+                    .OurTeam {
+                        margin-bottom: 140px;
+                    }
+                }
             `}</style>
         </>
     );

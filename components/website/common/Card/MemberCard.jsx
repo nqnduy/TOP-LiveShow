@@ -5,7 +5,7 @@ function MemberCard({ image, name, role }) {
         <div className="MemberCard">
             <ImageWrap src={image} gif="/images/gif/258x370.gif" />
             <div style={{ textAlign: "center", marginTop: 20 }}>
-                <p className="txMain bold" style={{ marginBottom: 14, fontSize: 21 }}>
+                <p className="txMain bold fz-21" style={{ marginBottom: 14 }}>
                     {name}
                 </p>
                 <p className="txMain upc thin">{role}</p>

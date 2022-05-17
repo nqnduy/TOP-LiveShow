@@ -7,8 +7,8 @@ function WhatNew({ hasViewMore = true }) {
                 <div className="PLMain" style={{ textAlign: "center", marginBottom: 50 }}>
                     <TextTitle small_text="what news?" big_text="News and promotions" />
                 </div>
-                <div className="NewGrid container flex" style={{ gap: 40, margin: "0 auto", justifyContent: "space-between" }}>
-                    <div style={{ width: "45%", height: "100%" }}>
+                <div className="NewGrid container flex">
+                    <div className="NewGrid__MainCOL">
                         <NewsCard
                             image="/images/new1.png"
                             category="News"
@@ -17,9 +17,9 @@ function WhatNew({ hasViewMore = true }) {
                             content="Lorem Ipsum is simply dummy text of the printing ets and typesetting industry. Lorem Ipsum has been the industry's standard text ever since the 1500s. Lorem Ipsum has been the industry's standard text ever since the 1500s"
                         />
                     </div>
-                    <div style={{ width: "23%", flexGrow: 1 }}>
+                    <div className="NewGrid__CenterCOL">
                         <div className="flexCOL" style={{ height: "100%" }}>
-                            <div>
+                            <div className="NewGrid__CenterCOL-item">
                                 <NewsCard
                                     image="/images/new2.png"
                                     column="center"
@@ -28,7 +28,7 @@ function WhatNew({ hasViewMore = true }) {
                                     title="The point of using Lorem Ipsum is that it has a more-or"
                                 />
                             </div>
-                            <div>
+                            <div className="NewGrid__CenterCOL-item">
                                 <NewsCard
                                     image="/images/new3.png"
                                     column="center"
@@ -39,7 +39,7 @@ function WhatNew({ hasViewMore = true }) {
                             </div>
                         </div>
                     </div>
-                    <div style={{ width: "27%", flexGrow: 1 }}>
+                    <div className="NewGrid__LastCOL">
                         <div className="flexCOL" style={{ height: "100%" }}>
                             <div>
                                 <NewsCard
@@ -86,8 +86,132 @@ function WhatNew({ hasViewMore = true }) {
                     </div>
                 )}
                 <style jsx>{`
+                    .WhatNew {
+                        .NewGrid {
+                            display: flex;
+                            gap: 40px;
+                            justify-content: space-between;
+                            margin: 0 auto;
+                            &__MainCOL {
+                                width: 45%;
+                                height: 100%;
+                            }
+                            &__CenterCOL {
+                                width: 23%;
+                                flex-grow: 1;
+                            }
+                            &__LastCOL {
+                                width: 27%;
+                                flex-grow: 1;
+                            }
+                        }
+                    }
                     .flexCOL {
                         justify-content: space-between;
+                    }
+                    @media (max-width: 1450px) {
+                        .WhatNew {
+                            .NewGrid {
+                                gap: 30px;
+                            }
+                        }
+                    }
+                    @media (max-width: 1300px) {
+                        .WhatNew {
+                            .NewGrid {
+                                gap: 20px;
+                            }
+                        }
+                    }
+                    @media (max-width: 1100px) {
+                        .WhatNew {
+                            .NewGrid {
+                                gap: 15px;
+                            }
+                        }
+                    }
+                    @media (max-width: 1024px) {
+                        .WhatNew {
+                            .NewGrid {
+                                gap: 30px;
+                                &__MainCOL {
+                                    width: 75%;
+                                }
+                                &__CenterCOL {
+                                    width: 40%;
+                                    height: 100%;
+                                    .flexCOL {
+                                        gap: 30px;
+                                    }
+                                }
+                                &__LastCOL {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                    @media (max-width: 850px) {
+                        .WhatNew {
+                            --fzr28: 26px;
+                            --lhr28: 35px;
+
+                            .NewGrid {
+                                gap: 20px;
+                                &__MainCOL {
+                                    width: 73%;
+                                }
+                                &__CenterCOL {
+                                    .flexCOL {
+                                        gap: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    @media (max-width: 660px) {
+                        .WhatNew {
+                            --fzr28: 23px;
+                            --lhr28: 30px;
+                            .NewGrid {
+                                gap: 15px;
+                                &__MainCOL {
+                                }
+                            }
+                        }
+                    }
+                    @media (max-width: 650px) {
+                        .WhatNew {
+                            .NewGrid {
+                                gap: 30px;
+                                flex-direction: column;
+                                &__MainCOL {
+                                    width: 100%;
+                                }
+                                &__CenterCOL {
+                                    width: 100%;
+
+                                    & > div {
+                                        gap: 30px !important;
+                                        flex-direction: row;
+                                    }
+                                    &-item {
+                                        width: calc((100% - 20px) / 2);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    @media (max-width: 480px) {
+                        .WhatNew {
+                            .NewGrid {
+                                gap: 20px !important;
+                                &__CenterCOL {
+                                    .flexCOL {
+                                        gap: 20px !important;
+                                    }
+                                }
+                            }
+                        }
                     }
                 `}</style>
             </div>

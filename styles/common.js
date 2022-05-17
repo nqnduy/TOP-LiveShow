@@ -44,7 +44,7 @@ const CommonStyle = () => {
                 .txMain {
                     color: #fff;
                     font-weight: 500;
-                    line-height: 26px;
+                    font-size: var(--fzrMain);
                     font-family: fm-m;
                     &.fz-36 {
                         font-size: var(--fzr36);
@@ -53,6 +53,10 @@ const CommonStyle = () => {
                     &.fz-30 {
                         font-size: var(--fzr30);
                         line-height: var(--lhr30);
+                    }
+                    &.fz-28{
+                        font-size: var(--fzr28);
+                        line-height: var(--lhr28);
                     }
                     &.fz-21 {
                         font-size: var(--fzr21);
